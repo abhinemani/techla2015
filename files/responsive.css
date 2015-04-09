@@ -1,0 +1,149 @@
+/* @override 
+	http://localhost/techla/wp-content/themes/techla/library/css/responsive.css?ver=1.0
+	http://techla2014.com/wp-content/themes/techla/library/css/responsive.css?ver=1.0 */
+@media only screen and (max-width: 768px){
+	.speaker-card:nth-child(5){
+		margin-left: 0px;
+	}
+	.overview{
+		width: 90%;
+		left: 30px;
+	}
+	.navbar-header{
+		height: 120px;
+	}
+	.navbar-toggle{
+		margin-right: 40px;
+		margin-top: 40px;
+	}
+	
+	
+}
+@media only screen and (max-width: 1200px){
+	.speaker-card:nth-child(5){
+		margin-left: 0px;
+	}
+	.speaker-card:nth-child(6){
+		margin-right: 10px;
+	}
+	
+	
+}
+@media only screen and (max-width: 480px), (max-device-width: 767px){
+	
+	.collapse #menu-landing a{
+		background-color: transparent;
+		text-align: center;
+		margin-bottom: 10px;
+		font-size: 22px;
+	}
+	.navbar-brand{
+		width: 120px;
+	}
+	.navbar-header{
+		height: 70px;
+	}
+	.navbar-toggle{
+		margin-right: 20px;
+		margin-top: 20px;
+	}
+	body.home{
+		padding-top: 70px;
+	}
+	#section-home-slider{
+		min-height: inherit;
+		height: inherit;
+		background-size: 190% !important;
+		background-position: center top !important;
+	}
+	
+	#section-home-slider .container{
+		min-height: inherit;
+		padding: 0;
+	}
+	.overview{
+		width: 100%;
+		background-color: #fff;
+		padding: 40px;
+		position: relative;
+		bottom: 0;
+		right: 0;
+		margin-top: 20px;
+		clear: both;
+		margin-left: 0;
+		left: 0;
+	}
+	.info-wrapper{
+		width: 100%;
+		padding: 30px;
+		background-color: rgba(0, 0, 0, 0.34);
+		height: 320px;
+		position: relative;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		clear: both;
+		float: left;
+		margin-top: 0;
+	}
+	
+	#section-speakers{
+		margin-top: 20px;
+		padding-top: 30px;
+	}
+	.speaker-card{
+		width: 100%;
+		float: left;
+		margin-right: 0 !important;
+		margin-bottom: 10px;
+		margin-left: 0 !important;
+	}
+	.card-avatar img{
+		width: 100%;
+		height: inherit;
+	    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	    transition: all .3s;
+	    max-height: 300px;
+	}
+	.card-info h3{
+		margin: 5px 0;
+		color: #2a2b2e;
+		font-size: 24px;
+		font-weight: 400;
+	}
+	.card-info .website a{
+		color: #333;
+		font-size: 18px;
+		word-wrap: break-word;
+		line-height: 12px;
+	}
+	.card-info .website,.card-info .company{
+		font-size: 16px;
+	}
+
+
+	#events-list li>div{
+		padding: 0;
+		margin-bottom:10px;
+	}
+	#events-list li .event-title a{
+		color: #333;
+		font-weight: 600;
+		font-size: 24px;
+	}
+	#section-events{
+		margin: 0;
+	}
+	#section-map iframe, #map-canvas{
+		height: 250px;
+	}
+	.footer-top .pull-left{
+		width: 100%;
+	}
+	.footer-top{
+		text-align: center;
+	}
+	.footer-bottom .socials{
+		margin: -5px 0 0;
+	}
+}
