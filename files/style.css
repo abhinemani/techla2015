@@ -21,7 +21,7 @@ body{
 	font-family: "Open Sans";
 	color:  #2a2b2e;
 	font-size: 18px; /* Approximation due to font substitution */
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.556; /* Approximation due to font substitution */
 }
 body.home{
