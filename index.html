@@ -36,7 +36,8 @@
 		<link rel='stylesheet' id='responsive-css'  href='responsive.css' type='text/css' media='all' />
 		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 		<!-- end of wordpress head -->
-				
+		<script type="text/javascript" src="js/sheetsee.js"></script>
+		<script type="text/javascript" src="js/tabletop.js"></script>
 	</head>
 	
 	<body class="home page page-id-19 page-template-default" data-spy="scroll" data-target="#main-nav-wrapper" data-offset="100" z="">
@@ -166,117 +167,56 @@ A Summer-long Challenge for Innovation									</h1>
 				
 				<section id="section-events" class="section clearfix">
 					<div class="container">
-						<h2>Schedule</h2>
-						<ul id="events-list" class="list-unstyled">
-							<li class="row">
-								<div class="col-sm-2">
-									<div class="event-date">
-										May 8, 2015
-									</div>
-									<div class="event-time"></div>
-									<div class="event-location">
-										Los Angeles Public Library									
-									</div>
-								</div>
-								<div class="event-title col-sm-4">
-									<a href="#"> National League of Cities Big Ideas Festival</a>
-								</div>
-								<div class="col-sm-6 event-description">
-									<p>A convening of mayors from across the country to share their "big ideas" for civic innovations.</p>
-									<p>12pm-4:30pm</p>
-								</div>
-							</li>
-							<li class="row">
-								<div class="col-sm-2">
-									<div class="event-date">
-										June 6-7, 2015
-									</div>
-									<div class="event-time"></div>
-									<div class="event-location">
-										Water and Power									
-									</div>
-								</div>
-								<div class="event-title col-sm-4">
-									<a href="#"> National Day of Civic Hacking</a>
-								</div>
-								<div class="col-sm-6 event-description">
-									<p>In collaboration with the White House, Code for America and hundreds of other cities, Hack for LA will host a hackathon, focused on conseration, immigration, and transportation.</p>
-								</div>
+						<div id="photogrid"></div>
+
 							
-							</li>
-							<li class="row">
-								<div class="col-sm-2">
-									<div class="event-date">
-										July, 2015
+												
+
+
+					  		<script id="photogrid" type="text/html">
+								<h2>Schedule</h2>
+								<ul id="events-list" class="list-unstyled">
+ 
+					  		  {{#rows}}
+								<li class="row">
+									<div class="col-sm-2">
+										<div class="event-date">
+											{{date}}
+										</div>
+										<div class="event-time"></div>
+										<div class="event-location">
+											{{location}}									
+										</div>
 									</div>
-									<div class="event-time"></div>
-									<div class="event-location">
-										Rhubarb									
+									<div class="event-title col-sm-4">
+										<a href="{{link}}"> {{title}}</a>
 									</div>
-								</div>
-								<div class="event-title col-sm-4">
-									<a href="#"> Water Cleanup Hardware Hack</a>
-								</div>
-								<div class="col-sm-6 event-description">
-									<p>Local creative agency, Rhbrb will host a hardware hackathon where teams will compete to see who can create the most efficient, low energy groundwater cleanup technology.</p>
-									<p>10am-8pm</p>
-								</div>
-							</li>
-							<li class="row">
-								<div class="col-sm-2">
-									<div class="event-date">
-										August, 2015
+									<div class="col-sm-6 event-description">
+										<p>{{description}}</p>
+										<p>{{time}}</p>
 									</div>
-									<div class="event-time"></div>
-									<div class="event-location">
-										CivLaVia Venice						
-									</div>
-								</div>
-								<div class="event-title col-sm-4">
-									<a href="#"> #civLaVia Transit Tech Hub </a>
-								</div>
-								<div class="col-sm-6 event-description">
-									<p>CivLAvia showcases how new forms of transportation are becoming real in LA. The Transit Tech Hub will showcase new innovations around sensors, wearables, and the internet of things that are transforming how we get around. </p>
-								</div>
-							</li>
-							<li class="row">
-								<div class="col-sm-2">
-									<div class="event-date">
-										September, 2015
-									</div>
-									<div class="event-time"></div>
-									<div class="event-location">
-										Highschool Hack									
-									</div>
-								</div>
-								<div class="event-title col-sm-4">
-									<a href="#"> TBD</a>
-								</div>
-								<div class="col-sm-6 event-description">
-									<p>As school gets back in session, City Hall will host a coding academy and hackathon for area youth.</p>
-									<p>9am-3pm</p>
-								</div>
-							</li>
-							<li class="row">
-								<div class="col-sm-2">
-									<div class="event-date">
-										October 15, 2015
-									</div>
-									<div class="event-time"></div>
-									<div class="event-location">
-										Los Angeles City Hall & Grand Park									
-									</div>
-								</div>
-								<div class="event-title col-sm-4">
-									<a href="#"> #techLA Festival</a>
-								</div>
-								<div class="col-sm-6 event-description">
-									<p>Building off of 2014’s successful #techLA conference at City Hall, the City will again host a capstone event at a larger scale to showcase the successful innovations from across LA. Spanning from Grand Park into City Hall, the Festival will include a mainstage with keynotes, awards, and prizes; an interactive tech showcase area; tech trainings; a job fair; and various panels and demos.</p>
-									<p>10am - 6:30pm</p>
-								</div>
-							</li>
+								</li>
+		     
+					  		  {{/rows}}   
+		  
+					  		</script>
 							
-													
+					  		<script type="text/javascript">
+					  		  document.addEventListener('DOMContentLoaded', function() {
+					  		  	var URL = "1WtSNX0ZUDz1ZlsVDGO0UeRo-ilXmeQst2pO6LB04YFo"
+					  		  	Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true, } )
+					  		  })
+					  		  function showInfo(data) {
+					  		    var html = Sheetsee.ich.photogrid({'rows': data})
+					  		    $('#photogrid').html(html)
+					  		    var optionsJSON = ["metric"]
+					  		      $('#photogrid a').each(function() {
+					  		          if($(this).attr('href') === '' || $(this).text() === 'N/A') {
+					  		              $(this).addClass("disabled");
+					  		          }
+					  		      });
+					  		     }			
+					  		  </script>													
 						</ul>
 						
 					</div>
@@ -333,6 +273,7 @@ A Summer-long Challenge for Innovation									</h1>
 <script type="text/javascript" src="js/trianglify.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/comment-reply.min.js"></script>
+
 
 	
 
