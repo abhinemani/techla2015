@@ -163,6 +163,13 @@ header .socials a{
  * SECTION SPEAKER 
  */
 
+#section-partners{
+/*	margin-top: 100px;*/
+	background-color: #f7f7f7;
+	padding-top: 120px;
+	padding-bottom: 40px;
+}
+
 #section-speakers{
 /*	margin-top: 100px;*/
 	background-color: #f7f7f7;
