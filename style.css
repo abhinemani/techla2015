@@ -37,6 +37,10 @@ h2{
 	font-weight: 600;
 	margin-top: 0;
 }
+a.disabled {
+	display: none;
+}
+
 #content{
 	padding: 0;
 }
