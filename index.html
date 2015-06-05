@@ -217,7 +217,7 @@ This summer, let's build things that matter.									</h1>
 					  		    var html = Sheetsee.ich.photogrid({'rows': data})
 					  		    $('#photogrid').html(html)
 					  		    var optionsJSON = ["metric"]
-					  		      $('#photogrid a').each(function() {
+					  		      $('#photogrid a.read-more').each(function() {
 					  		          if($(this).attr('href') === '' || $(this).text() === 'N/A') {
 					  		              $(this).addClass("disabled");
 					  		          }
